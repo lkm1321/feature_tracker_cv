@@ -26,7 +26,7 @@ class FeatureTracker {
   std::vector<Point2f> _curPoints; 
 
   public: 
-    FeatureTracker(); 
+    FeatureTracker(std::String input_topic, std::String output_topic); 
     void imageCallback(const sensor_msgs::ImageConstPtr& depth_image); 
 }; 
 

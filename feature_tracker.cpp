@@ -66,7 +66,7 @@ FeatureTracker::imageCallback(const sensor_msgs::ImageConstPtr& image) {
 
 int main(char argc, char** argv){
     ros::init(argc, argv, 'feature_tracker'); 
-    FeatureTracker ft;
+    FeatureTracker ft('/camera/rgb/image_rect_raw', '/feature_tracker/out');
     ros::spin(); 
     return 0; 
 }
